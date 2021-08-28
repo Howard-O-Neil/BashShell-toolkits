@@ -1,0 +1,12 @@
+export wh="/mnt/d/ubuntu_wsl/home"
+
+export custom_cli="$wh/bin"
+export PATH="$wh/bin:$PATH" # custom bin
+
+source "$wh/bin/__init__.sh"
+
+alias python="python3"
+alias wudo="$wh/wsl-sudo.py"
+alias pws="powershell.exe"
+alias docker="docker.exe"
+alias docker-compose="docker-compose.exe"
