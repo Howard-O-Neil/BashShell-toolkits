@@ -10,3 +10,11 @@ alias wudo="$wh/wsl-sudo.py"
 alias pws="powershell.exe"
 alias docker="docker.exe"
 alias docker-compose="docker-compose.exe"
+
+ssh-add -l &>/dev/null
+if [ "$?" == 2 ]; then
+    # Could not open a connection to your authentication agent.
+
+   eval "$(ssh-agent -s)" &>/dev/null
+   ssh-add /home/larryjason/.ssh/larryjason &>/dev/null
+fi
